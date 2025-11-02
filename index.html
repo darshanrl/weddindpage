@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chetana & Santosh — Wedding Invitation</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Wedding invitation for Chetana & Santosh — view invitation and video, see venue location.">
+</head>
+<body>
+  <div id="welcome-animation">
+    <div class="heart heart-left"><span>Santhosh</span></div>
+    <div class="heart heart-right"><span>Chetana</span></div>
+    <div class="welcome-message">Welcome to our wedding!</div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <h1>Chetana &amp; Santosh</h1>
+      <p class="sub">You are invited to join our wedding celebration</p>
+    </div>
+    <nav>
+      <a href="#invitation">Invitation</a>
+      <a href="#video">Video</a>
+      <a href="#location">Location</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Invitation card preview -->
+    <section id="invitation" class="card-section">
+      <div class="card-preview">
+        <img src="invitation.jpg" alt="Wedding invitation for Chetana and Santosh" id="inviteImage">
+      </div>
+      <div class="card-actions">
+        <h2>Invitation</h2>
+        <p>Click below to download the invitation PDF or view the image in full size.</p>
+        <a class="btn" href="invitation.pdf" download>Download PDF</a>
+        <a class="btn outline" id="view-large">View Image Large</a>
+      </div>
+    </section>
+
+    <!-- Video section -->
+    <section id="video" class="card-section">
+      <div class="video-wrap">
+        <h2>Invitation Video</h2>
+        <p>Play the wedding invitation video below.</p>
+        <video id="inviteVideo" controls poster="invitation.jpg" preload="metadata">
+          <source src="invitation-video.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+        <div class="video-ctas">
+          <a class="btn" href="invitation-video.mp4" download>Download Video</a>
+          <button class="btn outline" id="enterFull">Open Fullscreen</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location / Map section -->
+    <section id="location" class="card-section">
+      <h2>Venue & Directions</h2>
+      <p><strong>Banashankari Kalyana Mantapa, Banshankari Nagara, Ranebennur</strong></p>
+
+      <div class="map-and-info">
+        <div class="map-frame">
+          <!-- Google Maps embed using a search query (no API key required) -->
+          <iframe
+            title="Venue map"
+            src="https://www.google.com/maps?q=Banashankari+Kalyana+Mantapa+Banshankari+Nagara+Ranebennur&output=embed"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="map-info">
+          <p>Click below for full directions in Google Maps:</p>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/dir/?api=1&destination=Banashankari+Kalyana+Mantapa+Banshankari+Nagara+Ranebennur">
+            Open Directions in Google Maps
+          </a>
+
+          <h3>Reception (if any)</h3>
+          <p>Reception: <span class="blink">17/11/2025 at 12pm</span> — Ganga Priya Kalyana Mantapa</p>
+
+          <h3>Contact</h3>
+          <p>If you need help reaching the venue or have questions, call: <strong>+91-8431469059</strong> or <strong>+91-9353245552</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Simple lightbox for viewing the invitation image large -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lbClose" class="lb-close" aria-label="Close">✕</button>
+    <img id="lbImage" src="invitation.jpg" alt="Invitation large view">
+  </div>
+
+  <footer class="footer">
+    <p>© Chetana &amp; Santosh — 2025 • This is done by Darshan R L</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
